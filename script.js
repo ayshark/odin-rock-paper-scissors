@@ -44,19 +44,24 @@ function playRound(computerSelection, userSelection) {
 }
 
 function play() {
+    
     let computerSelection, userSelection;
     for (let i = 0; i < 5; i++) {
         computerSelection = computerPlay();
         userSelection = userPlay();
         playRound(computerSelection, userSelection);
     }
+
     console.log(`you scored ${userScore}`);
     console.log(`the computer scored ${computerScore}`);
+
     if (userScore == computerScore) console.log("the game is a draw");
     else if (userScore > computerScore) console.log(`WUHHUUUU YOU BEAT THE COMPUTER with a score of ${userScore}`);
     else console.log(`BOOOOOOOOO you could NOT beat the computer`);
+
     computerScore = 0;
     userScore = 0;  
+
     return;  
 }
 
