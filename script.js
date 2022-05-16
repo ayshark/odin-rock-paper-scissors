@@ -33,7 +33,7 @@ function playRound(computerSelection, userSelection) {
 
     result = computerSelection - userSelection;
     
-    if (result == -1 || result == 2) {
+    if (result == -1 || result == 2) {  // due to the order of the elements in the array, the difference for user to win is either -1 or 2
         console.log("you win this round!");
         userScore++;
     } else {
@@ -44,7 +44,7 @@ function playRound(computerSelection, userSelection) {
 }
 
 function play() {
-    
+
     let computerSelection, userSelection;
     for (let i = 0; i < 5; i++) {
         computerSelection = computerPlay();
